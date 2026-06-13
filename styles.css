@@ -16,6 +16,8 @@ html {
     font-family: "Segoe UI", sans-serif;
 }
 
+/*NavBar*/
+
 nav {
     background-color: var(--color-bg);
     padding: 1rem 2rem;
@@ -117,19 +119,30 @@ nav {
 }
 
 
+/* Estructura general */
+body {
+    background-color: #E8D9C5;
+    min-height: 100vh;
+    margin: 0; 
+    overflow: hidden; 
+}
 
-.background {
+.background-container {
     background-image: url(./assets/Fondo.png);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; /* Cambiado de 'space' para evitar duplicados */
-    background-color: #E8D9C5;
-    min-height: calc(100vh - 56px); 
+    background-repeat: no-repeat;
+    
+    /* CORRECCIÓN: Aumentamos la resta a 125px para dar margen de seguridad */
+    height: calc(100vh - 125px); 
+    width: 100%;
 }
 
 .cuadro {
-    padding: 5px;
-    border: solid 2px var(--color-bg-secondary);
+    /* CORRECCIÓN: Reducimos un poco el padding interno para que el contenido */
+    /* tenga más espacio para respirar sin empujar el diseño */
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
 }
 
 .mainText {
@@ -140,4 +153,29 @@ nav {
 .secondaryText {
     color: var(--color-help-features);
     text-align: right;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer_container {
+    background-color: var(--color-bg);
+    height: 56px; /* Altura fija idéntica a la Navbar para balancear el diseño */
+    display: flex;
+    align-items: center;
+}
+
+.footerText {
+    color: var(--color-Hover);
+    font-weight: 500;
+}
+
+
+.footer_container a {
+    color: var(--color-Hover);
+    transition: all 0.2s ease;
+}
+
+.footer_container a:hover {
+    color: var(--color-buttons-links);
+    transform: translateY(-2px);
 }
