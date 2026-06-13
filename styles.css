@@ -132,15 +132,12 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
-    /* CORRECCIÓN: Aumentamos la resta a 125px para dar margen de seguridad */
     height: calc(100vh - 125px); 
     width: 100%;
 }
 
 .cuadro {
-    /* CORRECCIÓN: Reducimos un poco el padding interno para que el contenido */
-    /* tenga más espacio para respirar sin empujar el diseño */
+  
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
 }
@@ -159,7 +156,7 @@ body {
 /* Footer */
 .footer_container {
     background-color: var(--color-bg);
-    height: 56px; /* Altura fija idéntica a la Navbar para balancear el diseño */
+    height: 56px; 
     display: flex;
     align-items: center;
 }
