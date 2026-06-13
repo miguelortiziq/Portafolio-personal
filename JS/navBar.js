@@ -1,5 +1,3 @@
-// 3 primeras líneas eliminadas para evitar el error de ejecución
-
 export function navbar() {
     const headerContainer = document.querySelector(".header_container");
 
