@@ -1,0 +1,143 @@
+html {
+    --color-bg: #C8B08B;
+    --color-bg-secondary: #E8D9C5;
+    --color-heathers: #4A3428;
+    --color-help-features: #7a5a46;
+    --color-buttons-links: #5B7FA6;
+    --color-Hover: #2f4f6f;
+    --color-optional1: #ffbf00;
+    --color-optional2: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+nav {
+    background-color: var(--color-bg);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--color-Hover);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    transition: all 0.3s ease;
+    align-items: baseline;
+}
+
+.navLinks a {
+    color: var(--color-Hover);
+    text-decoration: none;
+    font-weight: 500;
+    transiton: all 0.2s;
+}
+
+.navLinks a:hover {
+    color: var(--color-buttons-links);
+    transform: translateY(-2px);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-Hover);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .navLinks {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        clip-path: circle(0px at 90% -10%);
+        pointer-events: none;
+    }
+
+    .navLinks li {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    .navLinks.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .navLinks li:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .navLinks li:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    .navLinks li:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .navLinks li:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+
+}
+
+.navLinks.active {
+    clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+}
+
+
+
+.background {
+    background-image: url(./assets/Fondo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; /* Cambiado de 'space' para evitar duplicados */
+    background-color: #E8D9C5;
+    min-height: calc(100vh - 56px); 
+}
+
+.cuadro {
+    padding: 5px;
+    border: solid 2px var(--color-bg-secondary);
+}
+
+.mainText {
+    color: var(--color-heathers);
+    text-align: left;
+}
+
+.secondaryText {
+    color: var(--color-help-features);
+    text-align: right;
+}
