@@ -176,3 +176,30 @@ body {
     color: var(--color-buttons-links);
     transform: translateY(-2px);
 }
+
+/*Animacion vertical*/
+
+.verticalMove {
+  max-height: 500px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.verticalMove::-webkit-scrollbar {
+    width: 6px;
+}
+.verticalMove::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+}
+
+@media(max-width: 768px) {
+    .verticalMove {
+  max-height: 310px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+}
