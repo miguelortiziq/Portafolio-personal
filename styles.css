@@ -5,7 +5,7 @@ html {
     --color-help-features: #7a5a46;
     --color-buttons-links: #5B7FA6;
     --color-Hover: #2f4f6f;
-    --color-optional1: #ffbf00;
+    --color-optional1: #a08020;
     --color-optional2: black;
 }
 
@@ -128,7 +128,7 @@ body {
 }
 
 .background-container {
-    background-image: url(./assets/Fondo.png);
+    background-image: url(./assets/fondo3.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -144,14 +144,29 @@ body {
 
 .mainText {
     color: var(--color-heathers);
-    text-align: left;
+   
 }
 
 .secondaryText {
     color: var(--color-help-features);
-    text-align: right;
     line-height: 1.4;
 }
+
+.links{
+    color: var(--color-heathers);
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.links:hover{
+    text-decoration: underline;
+}
+
+.ID{
+    color: var(--color-optional1);
+}
+
 
 /* Footer */
 .footer_container {
@@ -197,6 +212,26 @@ body {
 @media(max-width: 768px) {
     .verticalMove {
   max-height: 310px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+}
+
+@media(max-width: 420px) {
+    .verticalMove {
+  max-height: 280px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+}
+
+@media(max-width: 400px) {
+    .verticalMove {
+  max-height: 250px;
     overflow-y: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
